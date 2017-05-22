@@ -10,6 +10,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --force-ye
 RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --force-yes --fix-missing install squid3
 RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --force-yes --fix-missing install openssh-server
 RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --force-yes --fix-missing install openssh-client
-RUN echo 'root:Uuddlrlrbas-190598'|chpasswd
-COPY squid.conf /etc/squid3
+RUN echo 'root:gizmo3'|chpasswd
+COPY squid.conf /etc/squid
 COPY sshd_config /etc/ssh
