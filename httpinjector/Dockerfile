@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:latest
 MAINTAINER rene.lee@mail.ita.mx
 RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --fix-missing update 
 RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --fix-missing upgrade 
@@ -11,5 +11,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --force-ye
 RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --force-yes --fix-missing install openssh-server
 RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y --force-yes --fix-missing install openssh-client
 RUN echo 'root:gizmo3'|chpasswd
-COPY squid.conf /etc/squid
+COPY squid.conf /etc/squid3
 COPY sshd_config /etc/ssh
