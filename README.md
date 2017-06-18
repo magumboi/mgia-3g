@@ -4,4 +4,5 @@
 Setting up a Squid proxy user:
 
 > sudo htpasswd -c /etc/squid3/passwords username_you_like
+
 > sudo service squid3 restart
